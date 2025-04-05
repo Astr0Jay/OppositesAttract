@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://djpvhxnekkold"]
+
+[ext_resource type="Script" uid="uid://byutd1hvixxvc" path="res://Menu Screen/menu.gd" id="1_blp4r"]
+[ext_resource type="Texture2D" uid="uid://bulvnjgiboeos" path="res://Menu Screen/OATitle.png" id="2_abhr7"]
+[ext_resource type="FontFile" uid="uid://c4nj4hvp3na31" path="res://poco/Poco.ttf" id="3_tehoo"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_blp4r")
+
+[node name="MainMenu" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu"]
+layout_mode = 2
+texture = ExtResource("2_abhr7")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Local Co-op" type="Button" parent="MainMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.52549, 0.52549, 0.52549, 1)
+theme_override_colors/font_color = Color(0.309804, 0.309804, 0.309804, 1)
+theme_override_colors/font_focus_color = Color(0.309804, 0.309804, 0.309804, 1)
+theme_override_colors/font_pressed_color = Color(0.937255, 0.196078, 0.345098, 1)
+theme_override_fonts/font = ExtResource("3_tehoo")
+theme_override_font_sizes/font_size = 30
+text = "Local Co-Op"
+flat = true
+
+[node name="Options" type="Button" parent="MainMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.529412, 0.529412, 0.529412, 1)
+theme_override_colors/font_color = Color(0.309804, 0.309804, 0.309804, 1)
+theme_override_colors/font_focus_color = Color(0.313726, 0.313726, 0.313726, 1)
+theme_override_colors/font_pressed_color = Color(0.937255, 0.196078, 0.345098, 1)
+theme_override_fonts/font = ExtResource("3_tehoo")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+flat = true
+
+[node name="Quit" type="Button" parent="MainMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.556863, 0.556863, 0.556863, 1)
+theme_override_colors/font_color = Color(0.309804, 0.309804, 0.309804, 1)
+theme_override_colors/font_focus_color = Color(0.309804, 0.309804, 0.309804, 1)
+theme_override_colors/font_pressed_color = Color(0.937255, 0.196078, 0.345098, 1)
+theme_override_fonts/font = ExtResource("3_tehoo")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="MainMenu/VBoxContainer/Local Co-op" to="." method="_on_local_coop_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

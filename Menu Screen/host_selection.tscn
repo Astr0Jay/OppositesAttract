@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6q5jtg1a0c2e"]
+
+[ext_resource type="Script" uid="uid://7c17iaum6r1c" path="res://Menu Screen/host_selection.gd" id="1_3nf6j"]
+[ext_resource type="Texture2D" uid="uid://bulvnjgiboeos" path="res://Menu Screen/OATitle.png" id="2_4u8ao"]
+[ext_resource type="FontFile" uid="uid://c4nj4hvp3na31" path="res://poco/Poco.ttf" id="3_y5s2k"]
+
+[node name="Host Selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3nf6j")
+
+[node name="HostMargins" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HostMargins"]
+layout_mode = 2
+texture = ExtResource("2_4u8ao")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HostMargins"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GameCode" type="Label" parent="HostMargins/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_y5s2k")
+theme_override_font_sizes/font_size = 30
+text = "Game Room:"
+horizontal_alignment = 1
+
+[node name="GameCodeInsert" type="LineEdit" parent="HostMargins/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_y5s2k")
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Insert Code"
+
+[node name="Host" type="Button" parent="HostMargins/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_y5s2k")
+theme_override_font_sizes/font_size = 30
+text = "Host Game"
+
+[node name="Join" type="Button" parent="HostMargins/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_y5s2k")
+theme_override_font_sizes/font_size = 30
+text = "Join Game"
+
+[node name="Back" type="Button" parent="HostMargins/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_y5s2k")
+theme_override_font_sizes/font_size = 30
+text = "Back to Menu"
+
+[connection signal="pressed" from="HostMargins/VBoxContainer/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="HostMargins/VBoxContainer/Join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="HostMargins/VBoxContainer/Back" to="." method="_on_back_pressed"]

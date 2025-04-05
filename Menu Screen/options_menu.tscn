@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://drw4t0qhfe8mf"]
+
+[ext_resource type="Script" uid="uid://bwvbibdsp25gy" path="res://Menu Screen/options_menu.gd" id="1_7f16p"]
+[ext_resource type="Texture2D" uid="uid://bxqwg0qrvdixc" path="res://Menu Screen/yinyang.png" id="2_7d26e"]
+[ext_resource type="FontFile" uid="uid://c4nj4hvp3na31" path="res://poco/Poco.ttf" id="3_ac7u8"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7f16p")
+
+[node name="OptionsMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="OptionsMargin"]
+layout_mode = 2
+texture = ExtResource("2_7d26e")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VolumeLabel" type="Label" parent="OptionsMargin/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ac7u8")
+theme_override_font_sizes/font_size = 30
+text = "Volume:"
+
+[node name="LineEdit" type="LineEdit" parent="OptionsMargin/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ac7u8")
+theme_override_font_sizes/font_size = 30
+
+[node name="Volume" type="HSlider" parent="OptionsMargin/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Back" type="Button" parent="OptionsMargin/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ac7u8")
+theme_override_font_sizes/font_size = 30
+text = "Back to Menu"
+
+[connection signal="value_changed" from="OptionsMargin/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="OptionsMargin/VBoxContainer/Back" to="." method="_on_back_pressed"]

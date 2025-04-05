@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4tja2uci5tk1"]
+
+[ext_resource type="Texture2D" uid="uid://b5kspujmfwnab" path="res://Levels/dagger2.png" id="1_jyfc1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hldnl"]
+size = Vector2(31.5, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D"]
+position = Vector2(-3.75, 3)
+shape = SubResource("RectangleShape2D_hldnl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_jyfc1")

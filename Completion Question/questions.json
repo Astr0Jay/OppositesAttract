@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "question": "Do you feel like we spend enough quality time together?",
+      "difficulty": 1
+    },
+    {
+      "question": "How do you feel about the way we divide responsibilities at home (or in our relationship)?",
+      "difficulty": 1
+    },
+    {
+      "question": "Do you think we’ve changed since we first got together? In what ways?",
+      "difficulty": 1
+    },
+    {
+      "question": "Have you ever felt emotionally neglected or unsupported in our relationship?",
+      "difficulty": 2
+    },
+    {
+      "question": "Do you ever feel like we’re not as intimate (emotionally or physically) as we used to be?",
+      "difficulty": 2
+    },
+    {
+      "question": "How do you feel about how we make decisions together, especially when we disagree? Do you think we handle conflict well?",
+      "difficulty": 2
+    },
+    {
+      "question": "Do you ever feel like you’re settling in this relationship?",
+      "difficulty": 3
+    },
+    {
+      "question": "Do you think we’re truly compatible, or are we just comfortable with each other?",
+      "difficulty": 3
+    },
+    {
+      "question": "How would you feel if we were no longer physically intimate (for any reason)?",
+      "difficulty": 3
+    }
+  ]
+}

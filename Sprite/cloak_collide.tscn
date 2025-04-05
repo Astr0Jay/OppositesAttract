@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1mujt30kh2v6"]
+
+[ext_resource type="Texture2D" uid="uid://c70l5k7xjcqyr" path="res://Sprite/Cloak1.png" id="1_uvgmg"]
+[ext_resource type="Texture2D" uid="uid://cirxer6e86x5e" path="res://Sprite/Cloak2.png" id="2_nuot4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vao3a"]
+radius = 8.0
+height = 24.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_da1qi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uvgmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nuot4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="CloakCollide" type="CollisionShape2D"]
+shape = SubResource("CapsuleShape2D_vao3a")
+
+[node name="CloakSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.666667, -6)
+sprite_frames = SubResource("SpriteFrames_da1qi")
+frame_progress = 0.158591

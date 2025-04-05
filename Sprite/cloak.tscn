@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2u8ka1tulq5w"]
+
+[ext_resource type="PackedScene" uid="uid://c1mujt30kh2v6" path="res://Sprite/cloak_collide.tscn" id="2_krorq"]
+[ext_resource type="AudioStream" uid="uid://dnsfl14ss5c8a" path="res://Sprite/death_sound.mp3" id="2_l7y8e"]
+[ext_resource type="Script" uid="uid://sp6rgfm7lg5n" path="res://Sprite/cloak_body.gd" id="4_ookv3"]
+
+[node name="CloakNode" type="Node2D"]
+scale = Vector2(1.5, 1.5)
+
+[node name="CloakBody" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("4_ookv3")
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="CloakBody"]
+stream = ExtResource("2_l7y8e")
+
+[node name="CloakCollide" parent="CloakBody" instance=ExtResource("2_krorq")]
+position = Vector2(-0.666667, 6)

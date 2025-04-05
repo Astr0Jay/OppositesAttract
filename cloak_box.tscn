@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://es8mb0ycbs52"]
+
+[ext_resource type="Texture2D" uid="uid://bx6y68w7befy3" path="res://Levels/cloak_box.png" id="1_lthmo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vo27r"]
+size = Vector2(34, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D"]
+position = Vector2(8, -14)
+shape = SubResource("RectangleShape2D_vo27r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.5, 3.27826e-07)
+scale = Vector2(1.57143, 1.625)
+texture = ExtResource("1_lthmo")

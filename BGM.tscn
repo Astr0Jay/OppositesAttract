@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://tvdm217cc02e"]
+
+[ext_resource type="AudioStream" uid="uid://dn53iflf0ulck" path="res://Menu Screen/Pixel Love Affair.mp3" id="1_f8x3a"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_f8x3a")
+autoplay = true

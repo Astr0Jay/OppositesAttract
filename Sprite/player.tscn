@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://6c21rl1wo23u"]
+
+[ext_resource type="Script" uid="uid://cvq3hgbaega1" path="res://Sprite/dagger.gd" id="1_3sarv"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0vqlq"]
+load_path = "res://.godot/imported/Dagger1.png-590afc9f8490ce646909d1bf71e48a62.ctex"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3sarv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = SubResource("CompressedTexture2D_0vqlq")
